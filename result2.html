@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="script.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -51,7 +50,7 @@
             <ul>
               <li><a href="#">MMC Members</a></li>
               <li><a href="#">President/Administrator List</a></li>
-              <li><a href="result2.html">RMP Information</a></li>
+              <li><a href="#">RMP Information</a></li>
               <li><a href="#">Fees Structure</a></li>
               <li><a href="result.html">Registration</a></li>
               <li><a href="#">Feedback</a></li>
@@ -67,46 +66,33 @@
         </div>
 
         <div class="main-2">
-          <div
-            id="carouselExampleControls"
-            class="carousel slide bootclass-image"
-            data-ride="carousel"
-          >
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="img1.jpg" alt="First slide" />
+          <div class="container">
+            <h1>Certificate</h1>
+            <form id="pdfForm">
+              <select id="selectOption" class="input-field" required>
+                <option value="" disabled selected>Select Option</option>
+                <option value="registration">Registration</option>
+              </select>
+              <input type="text" id="filename" class="input-field" placeholder="Enter Registration Number" required />
+              <div class="captcha-box">
+                <span id="captcha-text"></span>
+                <button type="button" id="refresh-captcha">Refresh</button>
               </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="img2.jpg" alt="Second slide" />
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="img3.jpg" alt="Third slide" />
-              </div>
+              <input type="text" id="captcha-input" class="input-field" placeholder="Enter CAPTCHA" required />
+              <button type="button" id="verify-captcha">Verify CAPTCHA</button>
+              <p id="captcha-message" class="error"></p>
+              <button type="submit" id="search-btn" disabled>Get Result</button>
+            </form>
+            <div class="error" id="error"></div>
+            <div id="userInfo" class="user-info" style="display:none;">
+              <h3>Candidate Details</h3>
+              <p><strong>SR No:</strong> <span id="srNo"></span></p>
+              <p><strong>Name:</strong> <span id="name"></span></p>
+              <p><strong>Qualification:</strong> <span id="qualification"></span></p>
+              <p><strong>Registration No:</strong> <span id="registrationNo"></span></p>
+              <p><strong>Registration Date:</strong> <span id="registrationDate"></span></p>
+              <p><strong>Valid Upto:</strong> <span id="validUpto"></span></p>
             </div>
-            <a
-              class="carousel-control-prev"
-              href="#carouselExampleControls"
-              role="button"
-              data-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a
-              class="carousel-control-next"
-              href="#carouselExampleControls"
-              role="button"
-              data-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="sr-only">Next</span>
-            </a>
           </div>
         </div>
 
@@ -210,8 +196,16 @@
                   13/11/2024 FOR PROVISIONAL REGISTRATION (FMG) INTERNSHIP</a
                 >
               </li>
-              <li><a href="#">Updation of CPD Credit Points under renewal Process</a></li>
-              <li><a href="#">Schedule for FMG Internship for FMGE June 2024 Session</a></li>
+              <li>
+                <a href="#"
+                  >Updation of CPD Credit Points under renewal Process</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Schedule for FMG Internship for FMGE June 2024 Session</a
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -239,8 +233,16 @@
                   13/11/2024 FOR PROVISIONAL REGISTRATION (FMG) INTERNSHIP</a
                 >
               </li>
-              <li><a href="#">Updation of CPD Credit Points under renewal Process</a></li>
-              <li><a href="#">Schedule for FMG Internship for FMGE June 2024 Session</a></li>
+              <li>
+                <a href="#"
+                  >Updation of CPD Credit Points under renewal Process</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Schedule for FMG Internship for FMGE June 2024 Session</a
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -268,8 +270,16 @@
                   13/11/2024 FOR PROVISIONAL REGISTRATION (FMG) INTERNSHIP</a
                 >
               </li>
-              <li><a href="#">Updation of CPD Credit Points under renewal Process</a></li>
-              <li><a href="#">Schedule for FMG Internship for FMGE June 2024 Session</a></li>
+              <li>
+                <a href="#"
+                  >Updation of CPD Credit Points under renewal Process</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Schedule for FMG Internship for FMGE June 2024 Session</a
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -297,14 +307,23 @@
                   13/11/2024 FOR PROVISIONAL REGISTRATION (FMG) INTERNSHIP</a
                 >
               </li>
-              <li><a href="#">Updation of CPD Credit Points under renewal Process</a></li>
-              <li><a href="#">Schedule for FMG Internship for FMGE June 2024 Session</a></li>
+              <li>
+                <a href="#"
+                  >Updation of CPD Credit Points under renewal Process</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Schedule for FMG Internship for FMGE June 2024 Session</a
+                >
+              </li>
             </ul>
           </div>
         </div>
       </div>
-      
     </div>
+
+    <script src="newScript.js"></script>
 
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
